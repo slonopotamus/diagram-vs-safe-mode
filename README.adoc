@@ -1,0 +1,12 @@
+= Asciidoctor Diagram vs --safe-mode
+
+....
+$ cd <repo root>
+$ asciidoctor -r asciidoctor-diagram --safe-mode server -D output book/book.adoc
+asciidoctor: WARNING: path is outside of jail; recovering automatically
+asciidoctor: WARNING: path is outside of jail; recovering automatically
+....
+
+And `cool-diag.png` is created in `book` dir instead of expected `output` dir.
+
+Reproduced using asciidoctor-2.0.10 + asciidoctor-diagram 2.0.1.
